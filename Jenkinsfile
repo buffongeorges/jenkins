@@ -5,7 +5,7 @@ pipeline{
         
         stage('test'){
             steps{
-                sh "nosetests -v TEST"
+                bat "TEST"
                 
             }
         }
