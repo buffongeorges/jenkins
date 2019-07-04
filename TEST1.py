@@ -1,4 +1,9 @@
-def somme(a, b):
-    return a+b
+class frac:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
-assert(somme(1, 2) == 3)
+    def mult(self, other):
+        return frac(self.a*other.a, self.b*other.b)
+
+
