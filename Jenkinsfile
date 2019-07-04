@@ -5,7 +5,7 @@ pipeline{
         
         stage('test'){
             steps{
-                cmd "TEST"
+                shell{"TEST"}
                 
             }
         }
