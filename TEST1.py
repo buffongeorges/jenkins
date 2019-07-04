@@ -10,5 +10,5 @@ class RandomTest(unittest.TestCase):
         liste = list(range(10))
         elt = random.choice(liste)
         # Vérifie que 'elt' est dans 'liste'
-        self.assertIn(elt, liste)
+        self.assertIn(12, liste)
     
