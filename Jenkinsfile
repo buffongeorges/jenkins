@@ -5,10 +5,8 @@ pipeline{
         
         stage('test'){
             steps{
-                bat """
+                sh "nosetests -v TEST"
                 
-                    pytest
-                """
             }
         }
     }
