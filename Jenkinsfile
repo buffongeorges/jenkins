@@ -3,12 +3,7 @@ pipeline{
     
     stages{
         stage('build'){
-           agent {
-                docker {
-                    image 'python:3-alpine'
-                }
-            }
-            steps {
+           steps {
                 withPythonEnv('python') {
                     bat 'virtualenv venv --distribute'
                     bat 'source venv/bin/activate '
