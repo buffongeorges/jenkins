@@ -5,9 +5,9 @@ pipeline{
         
         stage('test'){
             steps{
-                py """
+                bat """
                 
-                    TEST.py
+                    python TEST.py
                 """
                 
             }
