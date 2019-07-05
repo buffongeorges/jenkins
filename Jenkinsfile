@@ -3,18 +3,20 @@ pipeline{
     
     stages{
         stage('build'){
-            steps{  
-                bat """pip install py"""
-                
+            steps{
+                withPythonEnv('python') {
+                    bat """pip install py"""
+                }
             }
         }
         
         stage('test'){
             steps{
-                bat """
+                withPythonEnv('python') {
+                    bat """
                     py TEST.py
                 """
-                
+                }
             }
         }
     }
