@@ -8,9 +8,7 @@ pipeline{
                     bat 'pip install virtualenv'
                    
                     bat 'virtualenv venv --distribute'
-                
-                    
-                    bat 'pip install -r requirements.txt'
+              
                     bat 'python TEST.py'
                 }
             }
