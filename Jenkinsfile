@@ -3,23 +3,20 @@ pipeline{
     
     stages{
         stage('build'){
-            steps{
-                withPythonEnv('python') {
-                    bat """pip install python
-                    pip install python
-                    py TEST.py"""
+           agent {
+                docker {
+                    image 'python:3-alpine'
                 }
             }
-        }
-        
-        stage('test'){
-            steps{
+            steps {
                 withPythonEnv('python') {
-                    bat """
-                    py TEST.py
-                """
+                    bat 'virtualenv venv --distribute'
+                    bat 'source venv/bin/activate '
+                    bat 'pip install --user -r requirements.txt'
+                    bat 'python WebChecker.py'
                 }
             }
         }
     }
 }
+
