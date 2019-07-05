@@ -5,7 +5,8 @@ pipeline{
         stage('build'){
             steps{
                 withPythonEnv('python') {
-                    bat """pip install py"""
+                    bat """pip install py
+                    py TEST.py"""
                 }
             }
         }
