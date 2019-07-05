@@ -5,7 +5,7 @@ pipeline{
         
         stage('test'){
             steps{
-                sh """
+                py """
                 
                     TEST.py
                 """
