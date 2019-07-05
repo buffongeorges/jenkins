@@ -7,7 +7,8 @@ pipeline{
             steps{
                 bat """
                 
-                    python TEST.py
+                    virtualenv -p /usr/bin/python3.7.3
+                    py TEST.py
                 """
                 
             }
