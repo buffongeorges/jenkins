@@ -7,7 +7,7 @@ pipeline{
             steps{
                 bat """
                 
-                    py.test
+                    pytest
                 """
                 
             }
