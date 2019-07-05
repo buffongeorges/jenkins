@@ -5,6 +5,7 @@ pipeline{
         stage('build'){
            steps {
                 withPythonEnv('python') {
+                    bat 'pip install virtualenv'
                     bat 'virtualenv venv --distribute'
                     bat 'source venv/bin/activate '
                     bat 'pip install --user -r requirements.txt'
