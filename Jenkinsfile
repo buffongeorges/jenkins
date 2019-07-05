@@ -2,17 +2,18 @@ pipeline{
     agent any
     
     stages{
-        stage('build'){
-           steps {
-                withPythonEnv('python') {
-                    bat 'pip install virtualenv'
-                   
-                    bat 'virtualenv venv --distribute'
-              
-                    bat 'python TEST.py'
+        
+        stage('test'){
+            steps{
+                script {
+                    withPythonEnv('python'){
+                        bat "python TEST.py"
+                    
+                    }
+                
                 }
-            }
         }
     }
 }
-
+    
+}
