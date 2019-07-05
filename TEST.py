@@ -1,4 +1,4 @@
-import APP
+from APP import frac
 import unittest
 
 class Test(unittest.TestCase):
