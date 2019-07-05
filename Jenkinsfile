@@ -10,7 +10,7 @@ pipeline{
                     bat 'virtualenv venv --distribute'
                 
                     
-                    bat 'pip install --user -r requirements.txt'
+                    bat 'pip install -r requirements.txt'
                     bat 'python TEST.py'
                 }
             }
