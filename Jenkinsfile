@@ -5,7 +5,7 @@ pipeline{
         
         stage('test'){
             steps{
-                shell "TEST"
+                shell "python.exe TEST.py"
                 
             }
         }
