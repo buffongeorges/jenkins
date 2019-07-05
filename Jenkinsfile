@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('build'){
             steps{  
-                pip install py
+                bat """pip install py"""
                 
             }
         }
