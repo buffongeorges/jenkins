@@ -5,7 +5,10 @@ pipeline{
         
         stage('test'){
             steps{
-                shell "python.exe TEST.py"
+                bat """
+                
+                    py.test
+                """
                 
             }
         }
